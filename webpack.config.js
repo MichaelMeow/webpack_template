@@ -21,10 +21,13 @@ module.exports = {
 
       {
         test: /\.scss$/,
-        use: [
-            "style-loader",
-            "css-loader",
-            "sass-loader"
+        use: [{
+            loader: "style-loader",
+          }, {
+            loader: "css-loader",
+          }, {
+            loader: "sass-loader"
+          }
         ]
       },
       {
@@ -47,7 +50,10 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          /spec/
+      ],
         loader: "eslint-loader"
       }
     ]
