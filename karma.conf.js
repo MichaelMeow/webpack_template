@@ -37,6 +37,7 @@ module.exports = function(config) {
       'karma-webpack',
       'karma-jasmine',
       'karma-chrome-launcher',
+      'karma-sourcemap-loader',
       'karma-jasmine-html-reporter'
     ],
 
